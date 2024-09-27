@@ -1,0 +1,73 @@
+/* Navigation.css */
+
+/* Desktop Styles */
+#navigation-container {
+  width: 4%;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden; /* Hide overflowing content during transition */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: fixed;
+  background-color: #000;
+  color: white;
+  z-index: 9999;
+}
+
+#navigation-container:hover {
+  width: 15%;
+}
+
+/* Initially hide nav-item-name */
+.nav-item-name {
+  display: none;
+  transition: opacity 0.2s ease-in-out; /* Add opacity transition */
+}
+
+#navigation-container:hover .nav-item-name {
+  display: block;
+  opacity: 1;
+}
+
+.search-input {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out; /* Add opacity transition */
+}
+
+#navigation-container:hover .search-input {
+  display: block;
+  opacity: 1;
+}
+
+#navigation-container:hover .search-icon {
+  display: none;
+  transition: opacity 0.2s ease-in-out; /* Add opacity transition */
+}
+
+/* Mobile Styles */
+.mobile-menu-icon {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  #navigation-container {
+    width: 0%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+
+  #navigation-container.show-sidebar {
+    width: 50%; /* Make navigation container take up half the screen width */
+    transform: translateX(0);
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10000; /* Ensure it is above other content */
+  }
+}
