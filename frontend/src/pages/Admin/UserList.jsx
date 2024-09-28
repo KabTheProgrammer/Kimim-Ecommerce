@@ -7,7 +7,7 @@ import{
     useDeleteUserMutation,
     useUpdateUserMutation,
 } from "../../redux/api/usersApiSlice"
-import Message from "../../components/message"
+import Message from "../../components/Message"
 import AdminMenu from "./AdminMenu"
 
 

@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <>
       <Navbar />
-      <div className="flex items-center justify-center w-full h-[24rem]">
+      <div className="flex items-center justify-center w-full h-[28rem]">
         {/* Full-screen Swiper for both desktop and mobile */}
         <Swiper />
       </div>

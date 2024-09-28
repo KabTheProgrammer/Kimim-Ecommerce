@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import Messsage from "../../components/message";
+import Message from "../../components/Message";
 import Loader from "../../components/Loader";
 import {
   useDeliverOrderMutation,
@@ -85,14 +85,14 @@ const Order = () => {
   return isLoading ? (
     <Loader />
   ) : error ? (
-    <Messsage variant="danger">{error.data.message}</Messsage>
+    <Message variant="danger">{error.data.message}</Message>
   ) : (
     <div className="container mx-auto px-4 md:px-8 lg:max-w-6xl">
       <div className="flex flex-col md:flex-row">
         <div className="md:w-2/3 pr-4">
           <div className="border gray-300 mt-5 pb-4 mb-5">
             {order.orderItems.length === 0 ? (
-              <Messsage>Order is empty</Messsage>
+              <Message>Order is empty</Message>
             ) : (
               <div className="overflow-x-auto">
                 <table className="w-full">
@@ -153,9 +153,9 @@ const Order = () => {
               <strong className="text-pink-500">Method:</strong> {order.paymentMethod}
             </p>
             {order.isPaid ? (
-              <Messsage variant="success">Paid on {order.paidAt}</Messsage>
+              <Message variant="success">Paid on {order.paidAt}</Message>
             ) : (
-              <Messsage variant="danger">Not paid</Messsage>
+              <Message variant="danger">Not paid</Message>
             )}
           </div>
 

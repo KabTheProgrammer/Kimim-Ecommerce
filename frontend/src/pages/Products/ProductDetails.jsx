@@ -7,7 +7,7 @@ import {
   useCreateReviewMutation,
 } from "../../redux/api/productApiSlice";
 import Loader from "../../components/Loader";
-import Message from "../../components/message";
+import Message from "../../components/Message";
 import {
   FaBox,
   FaClock,
