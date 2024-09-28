@@ -7,7 +7,9 @@ import { Provider } from 'react-redux'
 import store from './redux/store.js'
 
 // private routes
-import PrivateRoute from './components/privateRoute.jsx'
+import PrivateRoutes from './components/PrivateRoutes.jsx'
+
+
 
 // Auth
 import Login from './pages/Auth/Login.jsx'
@@ -50,13 +52,14 @@ const router = createBrowserRouter(
       <Route path="/about" element={<AboutUs />} />
       <Route path="/contact" element={<ContactUs />} />
 
-      <Route path='' element={<PrivateRoute />}>
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/shipping' element={<Shipping />} />
-        <Route path='/placeorder' element={<PlaceOrder />} />
-        <Route path='/order/:id' element={<Order />} />
-        <Route path='/cart/payment' element={<PaymentForm />} />
+      <Route path='' element={<PrivateRoutes />}>
+      <Route path='/profile' element={<Profile />} />
+      <Route path='/shipping' element={<Shipping />} />
+      <Route path='/placeorder' element={<PlaceOrder />} />
+      <Route path='/order/:id' element={<Order />} />
+      <Route path='/cart/payment' element={<PaymentForm />} />
       </Route>
+
 
       {/* Admin Routes */}
       <Route path="/admin" element={<AdminRoute />}>
