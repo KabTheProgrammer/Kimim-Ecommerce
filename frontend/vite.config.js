@@ -8,7 +8,8 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      "/api/": "http://localhost:5000",
+      // "/api/": "http://localhost:5000",
+      "/api/": "https://kimimi-qi5z.vercel.app",
       "/uploads/": "http://localhost:5000",
     },
   },
