@@ -64,8 +64,8 @@ const teamMembers = [
 const AboutUs = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      {/* <Navbar /> */}
       {/* Hero Section */}
+      {/* <Navbar /> */}
       <section className="w-full bg-cover bg-center h-96" style={{ backgroundImage: `url(${bg})` }}>
         <div className="flex items-center justify-center h-full bg-gray-900 bg-opacity-50">
           <h1 className="text-5xl text-white font-bold">About Us</h1>
